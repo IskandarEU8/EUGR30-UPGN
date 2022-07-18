@@ -8,15 +8,17 @@ public class Login_with_invalid_credentials_StepDefinition {
 
     LoginPage loginPage = new LoginPage();
 
-    @When("User inputs invalid email <{string}>")
-    public void user_inputs_invalid_email(String email) {
-       loginPage.emailInput.sendKeys(email);
-    }
-    @When("User inputs valid password <{string}>")
-    public void user_inputs_valid_password(String password) {
+    @When("User inputs invalid password {string}")
+    public void user_inputs_invalid_password(String password) {
         loginPage.passwordInput.sendKeys(password);
-        loginPage.LogInButton.click();
     }
+
+
+    @When("User inputs invalid email {string}")
+    public void user_inputs_invalid_email(String email) {
+        loginPage.emailInput.sendKeys(email);
+    }
+
 
 
     @Then("User sees Wrong login-password message")
@@ -24,3 +26,5 @@ public class Login_with_invalid_credentials_StepDefinition {
         loginPage.wrongLoginPasswordMessage.isDisplayed();
     }
 }
+
+

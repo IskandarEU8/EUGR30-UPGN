@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/upgn/step_definitions",
         dryRun = false,
-        tags = "@enter_button_check",
+        tags = "@UPGN-318",
         publish = true
 )
 
